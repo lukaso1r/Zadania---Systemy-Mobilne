@@ -1,0 +1,20 @@
+
+~	java:S116"]Rename this field "question_text_view" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÑİ©üÿÿÿÿ8ú›´±1
+x	java:S116"WRename this field "false_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïß” şÿÿÿÿ8ú›´±1
+w	java:S116"VRename this field "true_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïß” şÿÿÿÿ8ú›´±1
+w	java:S116"VRename this field "next_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïß” şÿÿÿÿ8ú›´±1
+t	java:S116"SRename this field "HowManyQ" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄÛ˜Ãøÿÿÿÿ8ú›´±1
+g
+java:S1659"EDeclare "question" and all following declarations on a separate line.(ûÑİ©üÿÿÿÿ8€‘›´±1
+j
+java:S1659"HDeclare "true_button" and all following declarations on a separate line.(ïß” şÿÿÿÿ8€‘›´±1
+E
+java:S1659"#Declare "wynik" on a separate line.(ŞÊöÉùÿÿÿÿ8€‘›´±1
+I
+java:S1125@"'Remove the unnecessary boolean literal.(öçØ§ùÿÿÿÿ8‘›´±1
+D
+java:S1125F"'Remove the unnecessary boolean literal.(ô£ÚÍ8‘›´±1
+I
+java:S1125J"'Remove the unnecessary boolean literal.(°Œà©şÿÿÿÿ8‘‘›´±1
+D
+java:S1125N"'Remove the unnecessary boolean literal.(ô£ÚÍ8ıĞ›´±1

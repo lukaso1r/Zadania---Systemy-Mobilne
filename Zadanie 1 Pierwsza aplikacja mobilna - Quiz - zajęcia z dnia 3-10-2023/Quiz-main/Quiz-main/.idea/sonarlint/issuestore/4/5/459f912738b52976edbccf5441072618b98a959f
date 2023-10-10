@@ -1,0 +1,9 @@
+
+x
+java:S1104"VMake pytaniaTab a static final constant or non-public and provide accessors if needed.(ÿÆûúúÿÿÿÿ8”Ó¯±1
+R
+java:S1444"0Make this "public static pytaniaTab" field final(ÿÆûúúÿÿÿÿ8”Ó¯±1
+?
+java:S2386"Make this member "protected".(ÿÆûúúÿÿÿÿ8ı´¼¯1
+\
+java:S1118":Add a private constructor to hide the implicit public one.(ÖäÏ“ıÿÿÿÿ8ı´¼¯1

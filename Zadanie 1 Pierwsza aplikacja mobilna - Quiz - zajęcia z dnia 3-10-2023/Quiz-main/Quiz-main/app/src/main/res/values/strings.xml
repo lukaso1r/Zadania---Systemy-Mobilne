@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="titleQuiz">Quiz o Polsce</string>
+    <string name="start">Tu pojawią się pytania</string>
+    <string name="button_true">Prawda</string>
+    <string name="button_false">Fałsz</string>
+    <string name="button_next">Następne</string>
+    <string name="pointsVal">Uzyskano punktów: 0</string>
+    <string name="niepoprawnaOdp">Niepoprawna odpowiedź</string>
+    <string name="poprawnaOdp">Poprawna odpowiedź</string>
+    <string name="pktSuma">Uzyskano punktów: </string>
+    <string name="koniecQuizu">Koniec pytań, kliknij jeszcze raz aby zrestartować</string>
+    <string name="pytaniaIle">Ilość Pytań: </string>
+
+<!--    Pytania do quizu    -->
+    <string name="q_Krakow" >Kraków jest stolicą Polski?</string>
+    <string name="q_Warszawa" >Przez Warszawę płynie Odra?</string>
+    <string name="q_Bialystok" >Białystok powstał w 1440?</string>
+    <string name="q_Sasiedzi" >Polska graniczy z siedmioma państwami?</string>
+    <string name="q_Rysy" >Najwyższa góra w Polsce to Rysy?</string>
+
+
+</resources>
