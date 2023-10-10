@@ -1,0 +1,77 @@
+Kod odpowiadający za logi:
+
+	private static final String TAGonCreate = "Wystąpilo onCreate";
+	private static final String TAGonStart = "Wystąpilo onStart";
+        private static final String TAGonResume = "Wystąpilo onResume";
+        private static final String TAGonPause = "Wystąpilo onPause";
+        private static final String TAGonStop = "Wystąpilo onStop";
+        private static final String TAGonDestroy = "Wystąpilo onDestroy";
+	
+	@Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            Log.d(TAGonCreate, "Wystąpiło onCreate!----------------------------------");
+	    [dalsza część kodu programu....]		
+	}
+
+	@Override
+    	protected void onStart() {
+        	super.onStart();
+        	Log.d(TAGonStart, "Wystąpiło onStart!----------------------------------");
+    	}
+
+    	@Override
+    	protected void onResume() {
+        	super.onResume();
+        	Log.d(TAGonResume, "Wystąpiło onResume!----------------------------------");
+    	}
+
+    	@Override
+    	protected void onPause() {
+        	super.onPause();
+        	Log.d(TAGonPause, "Wystąpiło onPause!----------------------------------");
+    	}
+
+    	@Override
+    	protected void onStop() {
+        	super.onStop();
+        	Log.d(TAGonStop, "Wystąpiło onStop!----------------------------------");
+    	}
+
+    	@Override
+    	protected void onDestroy() {
+        	super.onDestroy();
+        	Log.d(TAGonDestroy, "Wystąpiło onDestory!----------------------------------");
+    	}
+
+
+Wystąpienia logów:
+
+1. Otworzenie aplikacji po raz pierwszy:
+2023-10-10 22:31:24.185 10975-10975 Wystąpilo onCreate      com.example.quiz_cykl_zycia          D  Wystąpiło onCreate!----------------------------------
+2023-10-10 22:31:24.189 10975-10975 Wystąpilo onStart       com.example.quiz_cykl_zycia          D  Wystąpiło onStart!----------------------------------
+2023-10-10 22:31:24.194 10975-10975 Wystąpilo onResume      com.example.quiz_cykl_zycia          D  Wystąpiło onResume!----------------------------------
+
+2. Po kliknięciu przycisku "cofnij"
+2023-10-10 22:32:08.818 10975-10975 Wystąpilo onPause       com.example.quiz_cykl_zycia          D  Wystąpiło onPause!----------------------------------
+2023-10-10 22:32:09.641 10975-10975 Wystąpilo onStop        com.example.quiz_cykl_zycia          D  Wystąpiło onStop!----------------------------------
+
+3. Po powrocie do aplikacji, wybierając ją z listy aplikacji działających w tle:
+2023-10-10 22:33:11.341 10975-10975 Wystąpilo onStart       com.example.quiz_cykl_zycia          D  Wystąpiło onStart!----------------------------------
+2023-10-10 22:33:11.342 10975-10975 Wystąpilo onResume      com.example.quiz_cykl_zycia          D  Wystąpiło onResume!----------------------------------
+
+4. Po kliknięciu przycisku "home", kiedy aplikacja jest na pierwszym planie:
+2023-10-10 22:33:49.828 10975-10975 Wystąpilo onPause       com.example.quiz_cykl_zycia          D  Wystąpiło onPause!----------------------------------
+2023-10-10 22:33:50.626 10975-10975 Wystąpilo onStop        com.example.quiz_cykl_zycia          D  Wystąpiło onStop!----------------------------------
+
+5. Po ponownym uruchomieniu aplikacji:
+2023-10-10 22:35:07.726 10975-10975 Wystąpilo onCreate      com.example.quiz_cykl_zycia          D  Wystąpiło onCreate!----------------------------------
+2023-10-10 22:35:07.728 10975-10975 Wystąpilo onStart       com.example.quiz_cykl_zycia          D  Wystąpiło onStart!----------------------------------
+2023-10-10 22:35:07.730 10975-10975 Wystąpilo onResume      com.example.quiz_cykl_zycia          D  Wystąpiło onResume!----------------------------------
+
+
+
+
+
+
+

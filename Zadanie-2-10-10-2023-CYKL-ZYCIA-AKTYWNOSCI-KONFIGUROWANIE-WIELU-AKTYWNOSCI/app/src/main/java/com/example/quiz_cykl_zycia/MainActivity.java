@@ -3,6 +3,7 @@ package com.example.quiz_cykl_zycia;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,9 +14,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button false_button, true_button, next_button;
         int  questionIndex = 0, wynik = 0;
 
-
+        private static final String TAGonCreate = "Wystąpilo onCreate";
+        private static final String TAGonStart = "Wystąpilo onStart";
+        private static final String TAGonResume = "Wystąpilo onResume";
+        private static final String TAGonPause = "Wystąpilo onPause";
+        private static final String TAGonStop = "Wystąpilo onStop";
+        private static final String TAGonDestroy = "Wystąpilo onDestroy";
         boolean czyUdzielonoOdpowiedzi = false;
-        private Pytanie[] pytania = new Pytanie[]{
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAGonStart, "Wystąpiło onStart!----------------------------------");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAGonResume, "Wystąpiło onResume!----------------------------------");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAGonPause, "Wystąpiło onPause!----------------------------------");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAGonStop, "Wystąpiło onStop!----------------------------------");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAGonDestroy, "Wystąpiło onDestory!----------------------------------");
+    }
+
+    private Pytanie[] pytania = new Pytanie[]{
                 new Pytanie(R.string.q_Krakow, false),
                 new Pytanie(R.string.q_Warszawa, false),
                 new Pytanie(R.string.q_Bialystok, true),
@@ -26,6 +64,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+            Log.d(TAGonCreate, "Wystąpiło onCreate!----------------------------------");
+
             setContentView(R.layout.activity_main);
 
             question_text_view = findViewById(R.id.IDquestion_text_view);
