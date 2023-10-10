@@ -69,6 +69,13 @@ Wystąpienia logów:
 2023-10-10 22:35:07.728 10975-10975 Wystąpilo onStart       com.example.quiz_cykl_zycia          D  Wystąpiło onStart!----------------------------------
 2023-10-10 22:35:07.730 10975-10975 Wystąpilo onResume      com.example.quiz_cykl_zycia          D  Wystąpiło onResume!----------------------------------
 
+6. Po obróceniu ekranu:
+2023-10-10 22:42:46.817 11213-11213 Wystąpilo onPause       com.example.quiz_cykl_zycia          D  Wystąpiło onPause!----------------------------------
+2023-10-10 22:42:46.836 11213-11213 Wystąpilo onStop        com.example.quiz_cykl_zycia          D  Wystąpiło onStop!----------------------------------
+2023-10-10 22:42:46.840 11213-11213 Wystąpilo onDestroy     com.example.quiz_cykl_zycia          D  Wystąpiło onDestory!----------------------------------
+2023-10-10 22:42:46.887 11213-11213 Wystąpilo onCreate      com.example.quiz_cykl_zycia          D  Wystąpiło onCreate!----------------------------------
+2023-10-10 22:42:46.971 11213-11213 Wystąpilo onStart       com.example.quiz_cykl_zycia          D  Wystąpiło onStart!----------------------------------
+2023-10-10 22:42:46.974 11213-11213 Wystąpilo onResume      com.example.quiz_cykl_zycia          D  Wystąpiło onResume!----------------------------------
 
 
 
