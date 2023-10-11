@@ -11,13 +11,18 @@
     <string name="pktSuma">Uzyskano punktów: </string>
     <string name="koniecQuizu">Koniec pytań, kliknij jeszcze raz aby zrestartować</string>
     <string name="pytaniaIle">Ilość Pytań: </string>
+    <string name="hintbuttontext">Podpowiedź</string>
 
     <!--    Pytania do quizu    -->
-    <string name="q_Krakow" >Kraków jest stolicą Polski?</string>
-    <string name="q_Warszawa" >Przez Warszawę płynie Odra?</string>
-    <string name="q_Bialystok" >Białystok powstał w 1440?</string>
-    <string name="q_Sasiedzi" >Polska graniczy z siedmioma państwami?</string>
-    <string name="q_Rysy" >Najwyższa góra w Polsce to Rysy?</string>
+    <string name="q_Krakow">Kraków jest stolicą Polski?</string>
+    <string name="q_Warszawa">Przez Warszawę płynie Odra?</string>
+    <string name="q_Bialystok">Białystok powstał w 1440?</string>
+    <string name="q_Sasiedzi">Polska graniczy z siedmioma państwami?</string>
+    <string name="q_Rysy">Najwyższa góra w Polsce to Rysy?</string>
 
+
+    <!--  MainActivity 2  -->
+    <string name="titleMA2">Czy na pewno chcesz zobaczyć odpowiedź?</string>
+    <string name="showAnswear">Pokaż odpowiedź</string>
 
 </resources>

@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public static final String KEY_CURRENT_WYNIK = "wynik";
         public static final String KEY_CURRENT_WYNIK_TEXT = "WYNIK_TEXT";
         TextView question_text_view, question, points;
-        Button false_button, true_button, next_button;
+        Button false_button, true_button, next_button, hintbutton;
         int  questionIndex = 0;
         int wynik = 0;
 
@@ -87,8 +87,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(savedInstanceState!=null){
                 questionIndex = savedInstanceState.getInt(KEY_CURRENT_INDEX);
                 wynik = savedInstanceState.getInt(KEY_CURRENT_WYNIK);
-
-
             }
 
             question_text_view = findViewById(R.id.IDquestion_text_view);
@@ -97,10 +95,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             false_button = findViewById(R.id.IDfalse_button);
             true_button = findViewById(R.id.IDtrue_button);
             next_button = findViewById(R.id.IDnext_button);
+            hintbutton = findViewById(R.id.IDhintbutton);
 
             false_button.setOnClickListener(this);
             true_button.setOnClickListener(this);
             next_button.setOnClickListener(this);
+            hintbutton.setOnClickListener(this);
 
             question.setText(getString(R.string.pytaniaIle) + HowManyQ);
             loadQuestion();

@@ -62,4 +62,11 @@
         android:id="@+id/IDpoints"
         />
 
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/hintbuttontext"
+        android:id="@+id/IDhintbutton"
+        />
+
 </LinearLayout>
