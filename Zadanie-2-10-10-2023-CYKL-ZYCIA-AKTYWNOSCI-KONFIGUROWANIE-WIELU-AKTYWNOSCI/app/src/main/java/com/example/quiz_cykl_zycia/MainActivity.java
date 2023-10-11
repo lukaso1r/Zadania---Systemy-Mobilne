@@ -1,5 +1,6 @@
 package com.example.quiz_cykl_zycia;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -10,9 +11,14 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+        public static final String KEY_CURRENT_INDEX = "currentIndex";
+        public static final String KEY_CURRENT_WYNIK = "wynik";
+        public static final String KEY_CURRENT_WYNIK_TEXT = "WYNIK_TEXT";
         TextView question_text_view, question, points;
         Button false_button, true_button, next_button;
-        int  questionIndex = 0, wynik = 0;
+        int  questionIndex = 0;
+        int wynik = 0;
+
 
         private static final String TAGonCreate = "Wystąpilo onCreate";
         private static final String TAGonStart = "Wystąpilo onStart";
@@ -20,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         private static final String TAGonPause = "Wystąpilo onPause";
         private static final String TAGonStop = "Wystąpilo onStop";
         private static final String TAGonDestroy = "Wystąpilo onDestroy";
+        private static final String QUIZ_TAG = "Wystąpilo onSaveInstanceState";
         boolean czyUdzielonoOdpowiedzi = false;
 
 
@@ -53,6 +60,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d(TAGonDestroy, "Wystąpiło onDestory!----------------------------------");
     }
 
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d(QUIZ_TAG, "Wystąpiło wywołanie metody: onSaveInstanceState");
+        outState.putInt(KEY_CURRENT_INDEX, questionIndex);
+        outState.putInt(KEY_CURRENT_WYNIK, wynik);
+
+
+    }
+
     private Pytanie[] pytania = new Pytanie[]{
                 new Pytanie(R.string.q_Krakow, false),
                 new Pytanie(R.string.q_Warszawa, false),
@@ -65,8 +82,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             Log.d(TAGonCreate, "Wystąpiło onCreate!----------------------------------");
-
             setContentView(R.layout.activity_main);
+
+            if(savedInstanceState!=null){
+                questionIndex = savedInstanceState.getInt(KEY_CURRENT_INDEX);
+                wynik = savedInstanceState.getInt(KEY_CURRENT_WYNIK);
+
+
+            }
 
             question_text_view = findViewById(R.id.IDquestion_text_view);
             question = findViewById(R.id.IDquestions);
@@ -81,15 +104,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             question.setText(getString(R.string.pytaniaIle) + HowManyQ);
             loadQuestion();
+            loadPoints();
+
         }
 
         void loadQuestion(){
             question_text_view.setText(pytania[questionIndex].getIDpytanie());
         }
 
+        void loadPoints(){
+            points.setText(getString(R.string.pktSuma)  + Integer.toString(wynik));
+        }
+
         @Override
         public void onClick(View view) {
-            points.setText(getString(R.string.pktSuma)  + Integer.toString(wynik));
+            loadPoints();
             Button clickedButton = (Button) view;
             if(clickedButton.getId() == R.id.IDnext_button){
                 questionIndex++;
@@ -105,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(pytania[questionIndex].getOdpowiedz()){
                     wynik++;
                     question_text_view.setText(getString(R.string.poprawnaOdp));
-                    points.setText(getString(R.string.pktSuma) + Integer.toString(wynik));
+                    loadPoints();
                 }else if (czyUdzielonoOdpowiedzi==false){
                     question_text_view.setText(getString(R.string.niepoprawnaOdp));
                 }
@@ -114,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(!pytania[questionIndex].getOdpowiedz() && czyUdzielonoOdpowiedzi==false){
                     wynik++;
                     question_text_view.setText(getString(R.string.poprawnaOdp));
-                    points.setText(getString(R.string.pktSuma)  + Integer.toString(wynik));
+                    loadPoints();
                 }else if (czyUdzielonoOdpowiedzi==false){
                     question_text_view.setText(getString(R.string.niepoprawnaOdp));
                 }

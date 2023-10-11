@@ -1,0 +1,26 @@
+
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÕáÛ†8 ¸Ú±1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(’÷ı‰úÿÿÿÿ8÷¹¸Ú±1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ôøš8¼ÙÑÙ±1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Œ¬óë8¼ÙÑÙ±1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(½ó±¬8¼ÙÑÙ±1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ºµ¥ıÿÿÿÿ8ÁÄÜÙ±1
+~	java:S116"]Rename this field "question_text_view" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÑİ©üÿÿÿÿ8½ÙÑÙ±1
+x	java:S116"WRename this field "false_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïß” şÿÿÿÿ8½ÙÑÙ±1
+w	java:S116"VRename this field "true_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïß” şÿÿÿÿ8½ÙÑÙ±1
+w	java:S116"VRename this field "next_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïß” şÿÿÿÿ8½ÙÑÙ±1
+t	java:S116?"SRename this field "HowManyQ" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄÛ˜Ãøÿÿÿÿ8ı•ÔÙ±1
+g
+java:S1659"EDeclare "question" and all following declarations on a separate line.(ûÑİ©üÿÿÿÿ8ÃÙÑÙ±1
+j
+java:S1659"HDeclare "true_button" and all following declarations on a separate line.(ïß” şÿÿÿÿ8ÃÙÑÙ±1
+E
+java:S1659"#Declare "wynik" on a separate line.(ŞÊöÉùÿÿÿÿ8ÄÙÑÙ±1
+I
+java:S1125h"'Remove the unnecessary boolean literal.(öçØ§ùÿÿÿÿ8–ÔÙ±1
+D
+java:S1125m"'Remove the unnecessary boolean literal.(ô£ÚÍ8–ÔÙ±1
+I
+java:S1125r"'Remove the unnecessary boolean literal.(°Œà©şÿÿÿÿ8Ÿ–ÔÙ±1
+D
+java:S1125v"'Remove the unnecessary boolean literal.(ô£ÚÍ8¡–ÔÙ±1
