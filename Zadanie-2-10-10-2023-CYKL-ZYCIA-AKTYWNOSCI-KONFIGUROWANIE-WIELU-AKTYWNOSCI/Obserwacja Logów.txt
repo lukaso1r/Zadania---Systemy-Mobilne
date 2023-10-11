@@ -77,8 +77,38 @@ Wystąpienia logów:
 2023-10-10 22:42:46.971 11213-11213 Wystąpilo onStart       com.example.quiz_cykl_zycia          D  Wystąpiło onStart!----------------------------------
 2023-10-10 22:42:46.974 11213-11213 Wystąpilo onResume      com.example.quiz_cykl_zycia          D  Wystąpiło onResume!----------------------------------
 
+Obserwacje logów po wykonaniu punktu 12:
 
+1. Otworzenie aplikacji po raz pierwszy:
+2023-10-11 22:39:34.373  6430-6430  Wystąpilo onCreate      com.example.quiz_cykl_zycia          D  Wystąpiło onCreate!----------------------------------
+2023-10-11 22:39:34.749  6430-6430  Wystąpilo onStart       com.example.quiz_cykl_zycia          D  Wystąpiło onStart!----------------------------------
+2023-10-11 22:39:34.756  6430-6430  Wystąpilo onResume      com.example.quiz_cykl_zycia          D  Wystąpiło onResume!----------------------------------
 
+2. Po kliknięciu przycisku "cofnij"
+2023-10-11 22:39:47.557  6430-6430  Wystąpilo onPause       com.example.quiz_cykl_zycia          D  Wystąpiło onPause!----------------------------------
+2023-10-11 22:39:48.352  6430-6430  Wystąpilo onStop        com.example.quiz_cykl_zycia          D  Wystąpiło onStop!----------------------------------
+2023-10-11 22:39:48.355  6430-6430  Wystąpilo onDestroy     com.example.quiz_cykl_zycia          D  Wystąpiło onDestory!----------------------------------
 
+3. Po powrocie do aplikacji, wybierając ją z listy aplikacji działających w tle:
+2023-10-11 22:41:09.709  6601-6601  Wystąpilo onCreate      com.example.quiz_cykl_zycia          D  Wystąpiło onCreate!----------------------------------
+2023-10-11 22:41:09.811  6601-6601  Wystąpilo onStart       com.example.quiz_cykl_zycia          D  Wystąpiło onStart!----------------------------------
+2023-10-11 22:41:09.819  6601-6601  Wystąpilo onResume      com.example.quiz_cykl_zycia          D  Wystąpiło onResume!----------------------------------
 
+4. Po kliknięciu przycisku "home", kiedy aplikacja jest na pierwszym planie:
+2023-10-11 22:41:20.202  6601-6601  Wystąpilo onPause       com.example.quiz_cykl_zycia          D  Wystąpiło onPause!----------------------------------
+2023-10-11 22:41:20.785  6601-6601  Wystąpilo onStop        com.example.quiz_cykl_zycia          D  Wystąpiło onStop!----------------------------------
+2023-10-11 22:41:20.790  6601-6601  Wystąpilo ...tanceState com.example.quiz_cykl_zycia          D  Wystąpiło wywołanie metody: onSaveInstanceState
 
+5. Po ponownym uruchomieniu aplikacji:
+2023-10-11 22:43:11.072  6883-6883  Wystąpilo onCreate      com.example.quiz_cykl_zycia          D  Wystąpiło onCreate!----------------------------------
+2023-10-11 22:43:11.534  6883-6883  Wystąpilo onStart       com.example.quiz_cykl_zycia          D  Wystąpiło onStart!----------------------------------
+2023-10-11 22:43:11.544  6883-6883  Wystąpilo onResume      com.example.quiz_cykl_zycia          D  Wystąpiło onResume!----------------------------------
+
+6. Po obróceniu ekranu:
+2023-10-11 22:43:30.581  6883-6883  Wystąpilo onPause       com.example.quiz_cykl_zycia          D  Wystąpiło onPause!----------------------------------
+2023-10-11 22:43:30.599  6883-6883  Wystąpilo onStop        com.example.quiz_cykl_zycia          D  Wystąpiło onStop!----------------------------------
+2023-10-11 22:43:30.604  6883-6883  Wystąpilo ...tanceState com.example.quiz_cykl_zycia          D  Wystąpiło wywołanie metody: onSaveInstanceState
+2023-10-11 22:43:30.609  6883-6883  Wystąpilo onDestroy     com.example.quiz_cykl_zycia          D  Wystąpiło onDestory!----------------------------------
+2023-10-11 22:43:30.700  6883-6883  Wystąpilo onCreate      com.example.quiz_cykl_zycia          D  Wystąpiło onCreate!----------------------------------
+2023-10-11 22:43:30.828  6883-6883  Wystąpilo onStart       com.example.quiz_cykl_zycia          D  Wystąpiło onStart!----------------------------------
+2023-10-11 22:43:30.832  6883-6883  Wystąpilo onResume      com.example.quiz_cykl_zycia          D  Wystąpiło onResume!----------------------------------
