@@ -33,7 +33,7 @@
         android:id="@+id/TextVeiwShowAnswer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Odpowiedź" />
+        android:text="Odpowiedź" />
 
 
 

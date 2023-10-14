@@ -3,6 +3,7 @@ package com.example.quiz_cykl_zycia;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public static final String KEY_CURRENT_INDEX = "currentIndex";
         public static final String KEY_CURRENT_WYNIK = "wynik";
         public static final String KEY_CURRENT_WYNIK_TEXT = "WYNIK_TEXT";
+        public static final String KEY_EXTRA_ANSWER = "poprawna odpowiedz";
+
         TextView question_text_view, question, points;
         Button false_button, true_button, next_button, hintbutton;
         int  questionIndex = 0;
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         private static final String TAGonDestroy = "Wystąpilo onDestroy";
         private static final String QUIZ_TAG = "Wystąpilo onSaveInstanceState";
         boolean czyUdzielonoOdpowiedzi = false;
+
 
 
     @Override
@@ -100,7 +104,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             false_button.setOnClickListener(this);
             true_button.setOnClickListener(this);
             next_button.setOnClickListener(this);
-            hintbutton.setOnClickListener(this);
+
+//          przycisk podpwowiedzi
+            hintbutton.setOnClickListener((view -> {
+
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                boolean correctAnswer = pytania[questionIndex].getOdpowiedz();
+                intent.putExtra(KEY_EXTRA_ANSWER, correctAnswer);
+                startActivity(intent);
+
+            }));
 
             question.setText(getString(R.string.pytaniaIle) + HowManyQ);
             loadQuestion();
@@ -120,6 +133,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public void onClick(View view) {
             loadPoints();
             Button clickedButton = (Button) view;
+
+
             if(clickedButton.getId() == R.id.IDnext_button){
                 questionIndex++;
                 if(questionIndex<pytania.length){
