@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
 
     private boolean correctAnswer;
-    TextView TextVeiwShowAnswerWIDOK;
+    TextView textVeiwShowAnswerWIDOK;
     Button buttonShowAnswerBUTTON;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_main2);
 
         correctAnswer = getIntent().getBooleanExtra(MainActivity.KEY_EXTRA_ANSWER, true);
-        TextVeiwShowAnswerWIDOK = findViewById(R.id.TextVeiwShowAnswer);
+        textVeiwShowAnswerWIDOK = findViewById(R.id.TextVeiwShowAnswer);
         buttonShowAnswerBUTTON = findViewById(R.id.buttonShowAnswer);
 
         buttonShowAnswerBUTTON.setOnClickListener(this);
@@ -28,7 +28,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         if(buttonShowAnswerBUTTON.getId() == R.id.buttonShowAnswer) {
             int answer = correctAnswer ? R.string.button_true : R.string.button_false;
-            TextVeiwShowAnswerWIDOK.setText(answer);
+            textVeiwShowAnswerWIDOK.setText(answer);
         }
     }
 }

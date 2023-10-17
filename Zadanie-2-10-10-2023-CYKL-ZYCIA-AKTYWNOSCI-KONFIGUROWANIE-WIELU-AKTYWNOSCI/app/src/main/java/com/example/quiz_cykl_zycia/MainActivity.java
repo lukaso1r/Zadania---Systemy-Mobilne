@@ -113,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra(KEY_EXTRA_ANSWER, correctAnswer);
                 startActivity(intent);
 
+
             }));
 
             question.setText(getString(R.string.pytaniaIle) + HowManyQ);
