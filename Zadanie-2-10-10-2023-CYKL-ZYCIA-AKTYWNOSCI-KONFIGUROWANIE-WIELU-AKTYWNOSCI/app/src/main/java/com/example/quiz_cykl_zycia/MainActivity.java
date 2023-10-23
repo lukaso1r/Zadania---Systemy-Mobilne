@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public static final String KEY_CURRENT_WYNIK_TEXT = "WYNIK_TEXT";
         public static final String KEY_EXTRA_ANSWER = "poprawna odpowiedz";
 
-        TextView question_text_view, question, points;
+        TextView question_text_view, question, points, IDudzielonoOdpView;
         Button false_button, true_button, next_button, hintbutton;
         int  questionIndex = 0;
         int wynik = 0;
@@ -101,6 +101,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             question_text_view = findViewById(R.id.IDquestion_text_view);
             question = findViewById(R.id.IDquestions);
             points = findViewById(R.id.IDpoints);
+            IDudzielonoOdpView = findViewById(R.id.IDudzielonoOdp);
+
             false_button = findViewById(R.id.IDfalse_button);
             true_button = findViewById(R.id.IDtrue_button);
             next_button = findViewById(R.id.IDnext_button);
@@ -150,6 +152,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
         public void onClick(View view) {
+            IDudzielonoOdpView.setText("");
             loadPoints();
             Button clickedButton = (Button) view;
 
@@ -166,25 +169,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     wynik = 0;
                 }
             } else if (clickedButton.getId() == R.id.IDtrue_button && czyUdzielonoOdpowiedzi==false) {
-                if(pytania[questionIndex].getOdpowiedz()){
-                    wynik++;
-                    question_text_view.setText(getString(R.string.poprawnaOdp));
-                    loadPoints();
-                }else if (czyUdzielonoOdpowiedzi==false){
-                    question_text_view.setText(getString(R.string.niepoprawnaOdp));
+                if(answerWasShown){
+                    IDudzielonoOdpView.setText(getString(R.string.udzielonoPodpowiedzi));
+                }else {
+                    if (pytania[questionIndex].getOdpowiedz()) {
+                        wynik++;
+                        question_text_view.setText(getString(R.string.poprawnaOdp));
+                        loadPoints();
+                    } else if (czyUdzielonoOdpowiedzi == false) {
+                        question_text_view.setText(getString(R.string.niepoprawnaOdp));
+                    }
                 }
                 czyUdzielonoOdpowiedzi = true;
             }else{
-                if(!pytania[questionIndex].getOdpowiedz() && czyUdzielonoOdpowiedzi==false){
-                    wynik++;
-                    question_text_view.setText(getString(R.string.poprawnaOdp));
-                    loadPoints();
-                }else if (czyUdzielonoOdpowiedzi==false){
-                    question_text_view.setText(getString(R.string.niepoprawnaOdp));
+                if(answerWasShown){
+                    IDudzielonoOdpView.setText(getString(R.string.udzielonoPodpowiedzi));
+                }else {
+                    if (!pytania[questionIndex].getOdpowiedz() && czyUdzielonoOdpowiedzi == false) {
+                        wynik++;
+                        question_text_view.setText(getString(R.string.poprawnaOdp));
+                        loadPoints();
+                    } else if (czyUdzielonoOdpowiedzi == false) {
+                        question_text_view.setText(getString(R.string.niepoprawnaOdp));
+                    }
                 }
                 czyUdzielonoOdpowiedzi = true;
+
             }
+
         }
+
 
 
     }

@@ -12,6 +12,7 @@
     <string name="koniecQuizu">Koniec pytań, kliknij jeszcze raz aby zrestartować</string>
     <string name="pytaniaIle">Ilość Pytań: </string>
     <string name="hintbuttontext">Podpowiedź</string>
+    <string name="udzielonoPodpowiedzi">Podpowiedź została użyta!!!</string>
 
     <!--    Pytania do quizu    -->
     <string name="q_Krakow">Kraków jest stolicą Polski?</string>

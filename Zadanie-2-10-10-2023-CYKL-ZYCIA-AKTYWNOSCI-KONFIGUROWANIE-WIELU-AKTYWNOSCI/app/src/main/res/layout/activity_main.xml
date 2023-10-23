@@ -69,4 +69,12 @@
         android:id="@+id/IDhintbutton"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:padding="30dp"
+        android:id="@+id/IDudzielonoOdp"
+        />
+
 </LinearLayout>

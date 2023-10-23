@@ -1,24 +1,31 @@
 
-v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÕáÛ†8Ó¤´ö²1
-{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(’÷ı‰úÿÿÿÿ8Ô¤´ö²1
-v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ôøš8Ô¤´ö²1
-v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Œ¬óë8Ô¤´ö²1
-v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(½ó±¬8Õ¤´ö²1
-{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ºµ¥ıÿÿÿÿ8Õ¤´ö²1
-~	java:S116"]Rename this field "question_text_view" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÑİ©üÿÿÿÿ8Õ¤´ö²1
-x	java:S116"WRename this field "false_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıôÍ™úÿÿÿÿ8Õ¤´ö²1
-w	java:S116"VRename this field "true_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıôÍ™úÿÿÿÿ8Ö¤´ö²1
-w	java:S116"VRename this field "next_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıôÍ™úÿÿÿÿ8×¤´ö²1
-t	java:S116T"SRename this field "HowManyQ" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄÛ˜Ãøÿÿÿÿ8×¤´ö²1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÕáÛ†8¹è¼íµ1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(’÷ı‰úÿÿÿÿ8¹è¼íµ1
+v	java:S115 "ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ôøš8¹è¼íµ1
+v	java:S115!"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Œ¬óë8¹è¼íµ1
+v	java:S115""ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(½ó±¬8¹è¼íµ1
+{	java:S115#"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ºµ¥ıÿÿÿÿ8¹è¼íµ1
+~	java:S116"]Rename this field "question_text_view" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•œÑşıÿÿÿÿ8ºè¼íµ1
+~	java:S116"]Rename this field "IDudzielonoOdpView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•œÑşıÿÿÿÿ8ºè¼íµ1
+x	java:S116"WRename this field "false_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıôÍ™úÿÿÿÿ8ºè¼íµ1
+w	java:S116"VRename this field "true_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıôÍ™úÿÿÿÿ8ºè¼íµ1
+w	java:S116"VRename this field "next_button" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıôÍ™úÿÿÿÿ8ºè¼íµ1
+t	java:S116Y"SRename this field "HowManyQ" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÄÛ˜Ãøÿÿÿÿ8ºè¼íµ1
 g
-java:S1659"EDeclare "question" and all following declarations on a separate line.(ûÑİ©üÿÿÿÿ8â¤´ö²1
+java:S1659"EDeclare "question" and all following declarations on a separate line.(•œÑşıÿÿÿÿ8Çè¼íµ1
 j
-java:S1659"HDeclare "true_button" and all following declarations on a separate line.(ıôÍ™úÿÿÿÿ8ã¤´ö²1
+java:S1659"HDeclare "true_button" and all following declarations on a separate line.(ıôÍ™úÿÿÿÿ8Çè¼íµ1
+[
+java:S1874y">Remove this use of "startActivityForResult"; it is deprecated.(îü‰”8ßè¼íµ1
+g
+java:S1874Œ"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾8àè¼íµ1
+u
+java:S3776š"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(Ğ¸™áúÿÿÿÿ8áè¼íµ1
 J
-java:S1125•"'Remove the unnecessary boolean literal.(öçØ§ùÿÿÿÿ8¶¥´ö²1
+java:S1125«"'Remove the unnecessary boolean literal.(öçØ§ùÿÿÿÿ8ãè¼íµ1
 E
-java:S1125š"'Remove the unnecessary boolean literal.(ô£ÚÍ8Å¥´ö²1
+java:S1125³"'Remove the unnecessary boolean literal.(ô£ÚÍ8äè¼íµ1
 J
-java:S1125Ÿ"'Remove the unnecessary boolean literal.(°Œà©şÿÿÿÿ8Ô¥´ö²1
+java:S1125¼"'Remove the unnecessary boolean literal.(°Œà©şÿÿÿÿ8äè¼íµ1
 E
-java:S1125£"'Remove the unnecessary boolean literal.(ô£ÚÍ8ä¥´ö²1
+java:S1125À"'Remove the unnecessary boolean literal.(ô£ÚÍ8åè¼íµ1
