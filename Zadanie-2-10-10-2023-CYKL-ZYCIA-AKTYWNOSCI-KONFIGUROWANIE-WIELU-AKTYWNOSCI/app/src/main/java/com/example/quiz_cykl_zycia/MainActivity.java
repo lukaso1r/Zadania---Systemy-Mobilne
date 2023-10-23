@@ -1,6 +1,7 @@
 package com.example.quiz_cykl_zycia;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int  questionIndex = 0;
         int wynik = 0;
 
+        boolean answerWasShown;
+
+
 
         private static final String TAGonCreate = "Wystąpilo onCreate";
         private static final String TAGonStart = "Wystąpilo onStart";
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         private static final String TAGonStop = "Wystąpilo onStop";
         private static final String TAGonDestroy = "Wystąpilo onDestroy";
         private static final String QUIZ_TAG = "Wystąpilo onSaveInstanceState";
+        private static final int REQUEST_CODE_PROMPT = 0;
         boolean czyUdzielonoOdpowiedzi = false;
 
 
@@ -111,8 +116,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
                 boolean correctAnswer = pytania[questionIndex].getOdpowiedz();
                 intent.putExtra(KEY_EXTRA_ANSWER, correctAnswer);
-                startActivity(intent);
-
+                startActivityForResult(intent, REQUEST_CODE_PROMPT);
 
             }));
 
@@ -130,7 +134,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             points.setText(getString(R.string.pktSuma)  + Integer.toString(wynik));
         }
 
-        @Override
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode!=RESULT_OK){
+            return;
+        }
+        if (requestCode == REQUEST_CODE_PROMPT){
+            if (data == null){
+                return;
+            }
+            answerWasShown = data.getBooleanExtra(MainActivity2.KEY_EXTRA_ANSWER_SHOWN, false);
+        }
+    }
+
+    @Override
         public void onClick(View view) {
             loadPoints();
             Button clickedButton = (Button) view;
@@ -138,6 +156,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             if(clickedButton.getId() == R.id.IDnext_button){
                 questionIndex++;
+                answerWasShown = false;
                 if(questionIndex<pytania.length){
                     czyUdzielonoOdpowiedzi = false;
                     loadQuestion();
@@ -166,4 +185,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 czyUdzielonoOdpowiedzi = true;
             }
         }
+
+
     }
