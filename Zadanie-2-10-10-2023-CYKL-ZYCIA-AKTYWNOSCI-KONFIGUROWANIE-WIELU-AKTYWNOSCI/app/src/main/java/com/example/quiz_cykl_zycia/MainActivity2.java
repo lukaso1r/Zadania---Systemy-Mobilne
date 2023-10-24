@@ -44,12 +44,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         handler.postDelayed(runnable, 2000);
     }
 
-    Runnable runnable = new Runnable() {
-        @Override
-        public void run() {
-            finish();
-        }
-    };
+    Runnable runnable = this::finish;
 
 
 }
