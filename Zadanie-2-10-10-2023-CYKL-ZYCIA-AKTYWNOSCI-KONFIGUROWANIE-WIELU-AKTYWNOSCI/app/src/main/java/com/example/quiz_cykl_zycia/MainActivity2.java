@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.os.Handler;
 
 public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
 
+    Handler handler = new Handler();
     private boolean correctAnswer;
     TextView textVeiwShowAnswerWIDOK;
     Button buttonShowAnswerBUTTON;
@@ -39,9 +41,15 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         Intent resultIntent = new Intent();
         resultIntent.putExtra(KEY_EXTRA_ANSWER_SHOWN, answerWasShown);
         setResult(RESULT_OK, resultIntent);
-        finish();
-
+        handler.postDelayed(runnable, 2000);
     }
+
+    Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            finish();
+        }
+    };
 
 
 }
