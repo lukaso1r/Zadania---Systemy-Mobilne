@@ -15,5 +15,19 @@ public class Task {
     }
 
 
+    public void setName(String toString) {
+        this.name = toString;
+    }
 
+    public Object getDate() {
+        return date;
+    }
+
+    public boolean isDone() {
+        return done;
+    }
+
+    public void setDone(boolean isChecked) {
+        this.done = isChecked;
+    }
 }
