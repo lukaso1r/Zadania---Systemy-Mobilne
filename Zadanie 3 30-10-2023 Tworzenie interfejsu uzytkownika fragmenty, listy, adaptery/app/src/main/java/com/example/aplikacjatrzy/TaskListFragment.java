@@ -1,5 +1,6 @@
 package com.example.aplikacjatrzy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +44,7 @@ public class TaskListFragment extends Fragment {
 
         private TextView nameTextView, dateTextView;
         private Task task;
+        public static final String KEY_EXTRA_TASK_ID = "task_id";
         public TaskHolder(LayoutInflater inflater, ViewGroup parent){
             super(inflater.inflate(R.layout.list_item_task, parent, false));
             itemView.setOnClickListener(this);
@@ -54,9 +56,12 @@ public class TaskListFragment extends Fragment {
             nameTextView.setText(task.getName());
             dateTextView.setText(task.getDate().toString());
         }
-
-
-
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(getActivity(), MainActivity.class);
+            intent.putExtra(KEY_EXTRA_TASK_ID, task.getId());
+            startActivity(intent);
+        }
     }
 
     private class TaskAdapter extends RecyclerView.Adapter<TaskHolder>{
