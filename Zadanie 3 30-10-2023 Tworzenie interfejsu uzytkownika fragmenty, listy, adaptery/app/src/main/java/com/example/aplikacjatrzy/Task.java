@@ -31,4 +31,7 @@ public class Task {
         this.done = isChecked;
     }
 
+    public String getName() {
+        return name;
+    }
 }

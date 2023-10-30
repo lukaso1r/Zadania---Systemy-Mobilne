@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +17,7 @@ import java.util.List;
 public class TaskListFragment extends Fragment {
 
     RecyclerView recyclerView;
+    TaskAdapter adapter;
 
     @Nullable
     @Override
@@ -26,34 +28,57 @@ public class TaskListFragment extends Fragment {
         return view;
     }
 
-    private class TaskHolder extends RecyclerView.ViewHolder{
+    private void updateView(){
+        TaskStorage taskStorage = TaskStorage.getInstance();
+        List<Task> tasks = taskStorage.getTasks();
+        if (adapter == null){
+            adapter = new TaskAdapter(tasks);
+            recyclerView.setAdapter(adapter);
+        }else{
+            adapter.notifyDataSetChanged();
+        }
+    }
+
+    private class TaskHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+
+        private TextView nameTextView, dateTextView;
+        private Task task;
         public TaskHolder(LayoutInflater inflater, ViewGroup parent){
             super(inflater.inflate(R.layout.list_item_task, parent, false));
+            itemView.setOnClickListener(this);
+            nameTextView = itemView.findViewById(R.id.task_item_name);
+            dateTextView = itemView.findViewById(R.id.task_item_date);
         }
+        public void bind(Task task){
+            this.task =  task;
+            nameTextView.setText(task.getName());
+            dateTextView.setText(task.getDate().toString());
+        }
+
+
+
     }
 
     private class TaskAdapter extends RecyclerView.Adapter<TaskHolder>{
         private List<Task> tasks;
-
         public TaskAdapter(List<Task> tasks){
             this.tasks = tasks;
         }
-
         @NonNull
         @Override
         public TaskHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
             return new TaskHolder(layoutInflater, parent);
         }
-
         @Override
         public void onBindViewHolder(@NonNull TaskHolder holder, int position) {
 
         }
-
         @Override
         public int getItemCount() {
             return tasks.size();
         }
     }
+
+
 }

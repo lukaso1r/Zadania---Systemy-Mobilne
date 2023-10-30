@@ -6,7 +6,7 @@ import java.util.List;
 public class TaskStorage {
     private static final TaskStorage taskStorage = new TaskStorage();
     private final List<Task> tasks;
-    private static TaskStorage getInstance(){return taskStorage;}
+    public static TaskStorage getInstance(){return taskStorage;}
 
     private TaskStorage(){
         tasks = new ArrayList<>();
