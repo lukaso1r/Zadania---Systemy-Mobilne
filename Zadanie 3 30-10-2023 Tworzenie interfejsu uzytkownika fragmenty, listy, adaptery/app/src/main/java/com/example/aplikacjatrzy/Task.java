@@ -30,4 +30,5 @@ public class Task {
     public void setDone(boolean isChecked) {
         this.done = isChecked;
     }
+
 }
