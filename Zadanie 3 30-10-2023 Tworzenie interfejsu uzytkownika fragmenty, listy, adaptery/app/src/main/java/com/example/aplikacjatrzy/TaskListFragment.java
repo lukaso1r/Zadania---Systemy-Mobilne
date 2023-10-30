@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class TaskListFragment extends Fragment {
 
     RecyclerView recyclerView;
@@ -25,9 +27,33 @@ public class TaskListFragment extends Fragment {
     }
 
     private class TaskHolder extends RecyclerView.ViewHolder{
-
         public TaskHolder(LayoutInflater inflater, ViewGroup parent){
             super(inflater.inflate(R.layout.list_item_task, parent, false));
+        }
+    }
+
+    private class TaskAdapter extends RecyclerView.Adapter<TaskHolder>{
+        private List<Task> tasks;
+
+        public TaskAdapter(List<Task> tasks){
+            this.tasks = tasks;
+        }
+
+        @NonNull
+        @Override
+        public TaskHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
+            return new TaskHolder(layoutInflater, parent);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull TaskHolder holder, int position) {
+
+        }
+
+        @Override
+        public int getItemCount() {
+            return tasks.size();
         }
     }
 }
