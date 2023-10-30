@@ -72,7 +72,8 @@ public class TaskListFragment extends Fragment {
         }
         @Override
         public void onBindViewHolder(@NonNull TaskHolder holder, int position) {
-
+            Task task = tasks.get(position);
+            holder.bind(task);
         }
         @Override
         public int getItemCount() {
