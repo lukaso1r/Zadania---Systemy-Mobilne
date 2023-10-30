@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:text="@string/details_label"
         />
-    
+
     <Button
         android:id="@+id/task_date"
         android:layout_width="match_parent"
