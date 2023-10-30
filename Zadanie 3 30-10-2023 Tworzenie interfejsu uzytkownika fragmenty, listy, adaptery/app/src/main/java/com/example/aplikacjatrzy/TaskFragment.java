@@ -48,6 +48,8 @@ public class TaskFragment extends Fragment {
         this.view = inflater.inflate(R.layout.fragment_task, container, false);
 
         nameField = view.findViewById(R.id.task_name);
+        nameField.setText(task.getName());
+        
         dateButton = view.findViewById(R.id.task_date);
         doneCheckBox = view.findViewById(R.id.task_done);
 

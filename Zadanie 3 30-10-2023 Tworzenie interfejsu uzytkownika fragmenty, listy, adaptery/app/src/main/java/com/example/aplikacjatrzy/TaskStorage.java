@@ -26,4 +26,8 @@ public class TaskStorage {
         }
         return null;
     }
+
+    public List<Task> getTasks() {
+        return tasks;
+    }
 }
