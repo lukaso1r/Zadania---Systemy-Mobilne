@@ -8,12 +8,7 @@ import android.os.Bundle;
 public class TaskListActivity extends SingleFragmentActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
     protected Fragment createFragment() {
-        return null;
+        return new TaskListFragment();
     }
 }

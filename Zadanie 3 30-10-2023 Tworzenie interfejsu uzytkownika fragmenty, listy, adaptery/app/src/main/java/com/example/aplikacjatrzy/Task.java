@@ -4,8 +4,9 @@ import java.util.Date;
 import java.util.UUID;
 
 public class Task {
+
     private UUID id;
-    private  String name;
+    private String name;
     private Date date;
     private boolean done;
 
@@ -14,28 +15,35 @@ public class Task {
         date = new Date();
     }
 
-
-    public void setName(String toString) {
-        this.name = toString;
+    public UUID getId() {
+        return id;
     }
 
-    public Object getDate() {
-        return date;
-    }
-
-    public boolean isDone() {
-        return done;
-    }
-
-    public void setDone(boolean isChecked) {
-        this.done = isChecked;
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
-    public UUID getId() {
-        return id;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public boolean isDone() {
+        return done;
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
     }
 }
