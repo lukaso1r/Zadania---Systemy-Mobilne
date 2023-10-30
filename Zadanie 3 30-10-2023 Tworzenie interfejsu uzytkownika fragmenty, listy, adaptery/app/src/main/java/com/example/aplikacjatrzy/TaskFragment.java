@@ -49,7 +49,7 @@ public class TaskFragment extends Fragment {
 
         nameField = view.findViewById(R.id.task_name);
         nameField.setText(task.getName());
-        
+
         dateButton = view.findViewById(R.id.task_date);
         doneCheckBox = view.findViewById(R.id.task_done);
 

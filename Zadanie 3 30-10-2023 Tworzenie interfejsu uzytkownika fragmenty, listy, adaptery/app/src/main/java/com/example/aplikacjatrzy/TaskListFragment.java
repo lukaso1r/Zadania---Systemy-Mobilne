@@ -17,6 +17,7 @@ import java.util.List;
 
 public class TaskListFragment extends Fragment {
 
+    public static final String KEY_EXTRA_TASK_ID = "tasklistfragment.taskId";
     RecyclerView recyclerView;
     TaskAdapter adapter;
 
@@ -38,6 +39,12 @@ public class TaskListFragment extends Fragment {
         }else{
             adapter.notifyDataSetChanged();
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateView();
     }
 
     private class TaskHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
