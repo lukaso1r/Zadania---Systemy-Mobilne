@@ -23,4 +23,11 @@ public class TaskListFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return view;
     }
+
+    private class TaskHolder extends RecyclerView.ViewHolder{
+
+        public TaskHolder(LayoutInflater inflater, ViewGroup parent){
+            super(inflater.inflate(R.layout.list_item_task, parent, false));
+        }
+    }
 }
