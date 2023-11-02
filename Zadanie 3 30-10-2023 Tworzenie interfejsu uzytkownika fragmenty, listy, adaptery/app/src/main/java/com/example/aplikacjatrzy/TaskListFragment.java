@@ -51,7 +51,7 @@ public class TaskListFragment extends Fragment {
 
         private TextView nameTextView, dateTextView;
         private Task task;
-        public static final String KEY_EXTRA_TASK_ID = "task_id";
+
         public TaskHolder(LayoutInflater inflater, ViewGroup parent){
             super(inflater.inflate(R.layout.list_item_task, parent, false));
             itemView.setOnClickListener(this);

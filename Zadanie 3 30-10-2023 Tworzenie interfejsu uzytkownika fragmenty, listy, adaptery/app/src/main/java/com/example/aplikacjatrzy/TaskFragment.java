@@ -53,7 +53,6 @@ public class TaskFragment extends Fragment {
         dateButton = view.findViewById(R.id.task_date);
         doneCheckBox = view.findViewById(R.id.task_done);
 
-        Task task = new Task();
         nameField.addTextChangedListener(new TextWatcher(){
             @Override
             public void beforeTextChanged(CharSequence s, int start, int before, int count){
