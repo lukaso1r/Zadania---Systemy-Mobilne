@@ -1,9 +1,9 @@
 
-C
-java:S1185"(Remove this method to simply inherit it.(¨Œşÿÿÿÿ
-W
-java:S1874"<Remove this use of "getSerializableExtra"; it is deprecated.(şåÕüÿÿÿÿ
-[
-java:S1128"ERemove this unused import 'androidx.appcompat.app.AppCompatActivity'.(€¶£î
-]
-java:S1128"BRemove this unused import 'androidx.fragment.app.FragmentManager'.(¯­ë‹ıÿÿÿÿ
+J
+java:S1185"(Remove this method to simply inherit it.(¨Œşÿÿÿÿ8ëÏŒ¬Á1
+^
+java:S1874"<Remove this use of "getSerializableExtra"; it is deprecated.(şåÕüÿÿÿÿ8ıÏŒ¬Á1
+b
+java:S1128"ERemove this unused import 'androidx.appcompat.app.AppCompatActivity'.(€¶£î8†ĞŒ¬Á1
+d
+java:S1128"BRemove this unused import 'androidx.fragment.app.FragmentManager'.(¯­ë‹ıÿÿÿÿ8‡ĞŒ¬Á1

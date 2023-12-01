@@ -1,7 +1,7 @@
 
-R
-java:S1874!"7Remove this use of "getSerializable"; it is deprecated.(½‚°½ıÿÿÿÿ
-—
-java:S1186:"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úÂ÷ş
-—
-java:S1186B"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
+Y
+java:S1874!"7Remove this use of "getSerializable"; it is deprecated.(½‚°½ıÿÿÿÿ8åÓŒ¬Á1
+
+java:S1186:"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úÂ÷ş8ñÓŒ¬Á1
+
+java:S1186B"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê8ñÓŒ¬Á1

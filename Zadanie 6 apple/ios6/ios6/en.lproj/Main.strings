@@ -1,0 +1,10 @@
+
+/* Class = "UIButton"; configuration.title = "Information"; ObjectID = "bjb-h2-hkg"; */
+"bjb-h2-hkg.configuration.title" = "Information";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bjb-h2-hkg"; */
+"bjb-h2-hkg.normalTitle" = "Button";
+
+"Information"="Information";
+"The faculty is running %i programs on graduate and undergraduate level."="The faculty is running %i programs on graduate and undergraduate level.";
+"image"="wi-en";

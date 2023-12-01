@@ -1,0 +1,19 @@
+@class SecondViewController;
+
+@protocol SecondViewControllerDelegate <NSObject>
+
+- (void) addItemViewController:(SecondViewController *) cotntroller didFinishEnteringItem: (NSString *) item;
+
+@end
+
+@interface SecondViewController : UIViewControlle[disableRipple]="true"
+
+@property (nonatomic, weak) IBOutlet UITextField *modifiedSurnameTextField;
+
+@property NSString *surname;
+
+@property (nonatomic, weak) id <SecondViewControllerDelegate> delegate;
+
+NSString *itemToPassBack = self.modifiedSurnameTextField.text;
+[self.delegate addItemViewController:self didFinishEnteringItem:itemToPassBack];
+[self dismissViewControllerAnimated:YES completnion:nil];
