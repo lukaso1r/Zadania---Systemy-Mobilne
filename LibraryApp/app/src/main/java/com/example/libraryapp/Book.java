@@ -10,8 +10,6 @@ public class Book {
     private String title;
     private String author;
 
-    // Dodatkowe pola, jeśli są potrzebne
-
     // Konstruktor
     public Book(String title, String author) {
         this.title = title;

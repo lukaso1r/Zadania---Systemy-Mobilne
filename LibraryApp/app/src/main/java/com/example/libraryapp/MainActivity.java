@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private BookViewModel bookViewModel;
     public static final int NEW_BOOK_ACTIVITY_REQUEST_CODE = 1;
+    public static final int EXISTED_BOOK_ACTIVITY_REQUEST_CODE = 2;
+    private Book bookToEdit = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,13 +96,41 @@ public class MainActivity extends AppCompatActivity {
         private TextView bookTitleTextView;
         private TextView bookAuthorTextView;
 
-        public BookHolder(LayoutInflater inflater, ViewGroup parent){
+        private Book book;
+        boolean swiped = false;
+
+        private BookHolder(LayoutInflater inflater, ViewGroup parent){
             super(inflater.inflate(R.layout.book_list_item, parent, false));
+
+
+
+            itemView.setOnClickListener(view -> {
+                MainActivity.this.bookToEdit = this.book;
+                Intent intent = new Intent(MainActivity.this, EditBookActivity.class);
+                intent.putExtra("EDIT_BOOK_TITLE", book.getTitle());
+                intent.putExtra("EDIT_BOOK_AUTHOR", book.getAuthor());
+                startActivityForResult(intent, EXISTED_BOOK_ACTIVITY_REQUEST_CODE);
+            });
+
+            itemView.setOnLongClickListener(view -> {
+                if(!swiped) {
+                    MainActivity.this.bookViewModel.delete(this.book);
+                } else {
+                    swiped = false;
+                }
+                return true;
+            });
+
+
+
             bookTitleTextView = itemView.findViewById(R.id.book_title);
             bookAuthorTextView = itemView.findViewById(R.id.book_author);
+
+
         }
 
         public void bind(Book book){
+            this.book = book;
             bookTitleTextView.setText(book.getTitle());
             bookAuthorTextView.setText(book.getAuthor());
         }
@@ -112,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public BookHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
             return new BookHolder(getLayoutInflater(), parent);
+
+            
         }
 
         @Override
@@ -137,7 +169,6 @@ public class MainActivity extends AppCompatActivity {
             this.books = books;
             notifyDataSetChanged();
         }
-
 
     }
 
@@ -181,7 +212,14 @@ public class MainActivity extends AppCompatActivity {
 //SIĘ COŚ WYWALA JAK DA SIĘ COORDINATOR_LAYOUT MUSI ZOSTAĆ main_layout
             Snackbar.make(findViewById(R.id.main_layout), getString(R.string.book_added),
                     Snackbar.LENGTH_LONG).show();
-        }else{
+        } else if (requestCode == EXISTED_BOOK_ACTIVITY_REQUEST_CODE) {
+            bookToEdit.setTitle(data.getStringExtra(EditBookActivity.EXTRA_EDIT_BOOK_TITLE));
+            bookToEdit.setAuthor(data.getStringExtra(EditBookActivity.EXTRA_EDIT_BOOK_AUTHOR));
+            bookViewModel.update(bookToEdit);
+            bookToEdit = null;
+            Snackbar.make(findViewById(R.id.main_layout),"edycja książki", Snackbar.LENGTH_LONG).show();
+
+        } else{
             Snackbar.make(findViewById(R.id.main_layout), getString(R.string.empty_not_saved),
                     Snackbar.LENGTH_LONG).show();
         }
