@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Zadanie 9 Zasoby sieciowe</string>
+    <string name="book_cover">Okładka</string>
+    <string name="clear_search">Resetuj</string>
+    <string name="search">Szukaj</string>
+    <string name="book_download_fail">Błąd pobierania książki</string>
 </resources>
