@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onFailure(Call<BookContainer> call, Throwable t) {
+//                BŁĄD
 //                Snackbar.make(findViewById(R.id.main_view),
 //                        getString(R.string.book_download_fail),
 //                        BaseTransientBottomBar.LENGTH_LONG).show();
